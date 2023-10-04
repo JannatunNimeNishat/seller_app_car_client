@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
-import data from '../../public/cars.json'
+// import data from '../../public/cars.json'
 export const CarContext = createContext();
 
 const totalPages = [
@@ -64,26 +64,32 @@ const ContextProvider = ({ children }) => {
     }, [])
 
 
-    const getData = (currentPage = 1, limit = 2) => {
-
+    const getData = (currentPage = 1, limit = 6) => {
         fetch(`http://localhost:5003/paginate?page=${currentPage}&limit=${limit}`, {
             method: "GET",
         })
             .then((res) => res.json())
             .then((data) => {
                 setLoading(false);
-                // console.log(data.data, "userData");
+                console.log(data.data, "userData");
                 setAllCars(data);
                 setCars(data)
 
             });
     }
 
-    const search = (value) => {
-        const regex = new RegExp(value, 'i');
-        const searchedCars = allCars?.filter(car => regex.test(car?.model))
-        setCars(searchedCars);
-        console.log('search', value, searchedCars);
+    const search = (value = '') => {
+
+        fetch(`http://localhost:5003/search/?searchValue=${value}`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data, "search data");
+                setAllCars(data);
+                setCars(data)
+            });
+
     }
 
 

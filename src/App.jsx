@@ -8,8 +8,9 @@ import Loading from "./components/Loading";
 
 function App() {
   const { cars, loading } = useContext(CarContext);
-  if(loading){
-    return <Loading/>
+  console.log('cars', cars);
+  if (loading) {
+    return <Loading />
   }
   return (
     <div className="my-container">
