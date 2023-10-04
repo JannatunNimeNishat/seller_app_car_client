@@ -6,7 +6,7 @@ const Search = () => {
     const { search } = useContext(CarContext);
 
     return (
-        <div className="bg-sky-100 rounded-3xl shadow-xl drop-shadow-2xl border   px-5 py-5 mt-8 flex items-center gap-5">
+        <div className="bg-[#e0ecf7] rounded-3xl shadow-xl drop-shadow-2xl border   px-5 py-5 mt-8 flex items-center gap-5">
             {/*search bar*/}
             <div className="relative border w-[300px]">
                 <input className="rounded-3xl  px-5 w-[300px] py-2" type="text" placeholder="Search"
