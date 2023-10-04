@@ -1,14 +1,15 @@
 import { useContext } from "react"
 import { CarContext } from "./providers/contextProvider"
+import Search from "./components/Search";
 
 
 function App() {
   const { cars } = useContext(CarContext);
   console.log(cars);
   return (
-    <>
-      <h1 className="text-5xl font-bold">hello</h1>
-    </>
+    <div className="my-container">
+      <Search />
+    </div>
   )
 }
 
