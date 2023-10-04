@@ -14,7 +14,7 @@ import { PiSteeringWheelBold } from "react-icons/pi";
 import { AiOutlineHeart } from "react-icons/ai";
 
 const Car = ({ item }) => {
-   
+    
     const { model, images, features, edition, price } = item || {};
     return (
         <div className=" h-[520px] px-4 py-3 shadow-xl drop-shadow-2xl border rounded-2xl bg-[#e0ecf7]" >
