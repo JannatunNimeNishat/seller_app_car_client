@@ -12,7 +12,7 @@ const Pagination = () => {
                 {/* perv */}
                 <span
                     className="cursor-pointer"
-                    // onClick={() => handlePageClick(allCars?.prev?.page)}
+                   
                     onClick={() => handlePageClick(currentPage - 1)}
                 >prev</span>
 
@@ -33,7 +33,7 @@ const Pagination = () => {
                 {/* next */}
                 <span
                     className="cursor-pointer"
-                    // onClick={() => handlePageClick(allCars?.next?.page)}
+                   
                     onClick={() => handlePageClick(currentPage + 1)}
                 >next</span>
 

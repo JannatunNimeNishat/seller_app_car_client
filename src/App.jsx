@@ -3,12 +3,13 @@ import { CarContext } from "./providers/contextProvider"
 import Search from "./components/Search";
 import Car from "./components/Car";
 import Pagination from "./components/Pagination";
+import Loading from "./components/Loading";
 
 
 function App() {
   const { cars, loading } = useContext(CarContext);
   if(loading){
-    return <div className="text-7xl font-bold ">Loding please wait</div>
+    return <Loading/>
   }
   return (
     <div className="my-container">

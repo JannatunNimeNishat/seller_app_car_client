@@ -72,11 +72,9 @@ const ContextProvider = ({ children }) => {
             .then((res) => res.json())
             .then((data) => {
                 setLoading(false);
-                console.log(data.data, "userData");
-
+                // console.log(data.data, "userData");
                 setAllCars(data);
                 setCars(data)
-
 
             });
     }
