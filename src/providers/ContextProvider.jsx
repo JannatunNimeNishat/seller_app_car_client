@@ -65,7 +65,8 @@ const ContextProvider = ({ children }) => {
 
 
     const getData = (currentPage = 1, limit = 6) => {
-        fetch(`http://localhost:5003/paginate?page=${currentPage}&limit=${limit}`, {
+        
+        fetch(`https://seller-app-car-server.vercel.app/paginate?page=${currentPage}&limit=${limit}`, {
             method: "GET",
         })
             .then((res) => res.json())
@@ -80,7 +81,7 @@ const ContextProvider = ({ children }) => {
 
     const search = (value = '') => {
 
-        fetch(`http://localhost:5003/search/?searchValue=${value}`, {
+        fetch(`https://seller-app-car-server.vercel.app/search/?searchValue=${value}`, {
             method: "GET",
         })
             .then((res) => res.json())
